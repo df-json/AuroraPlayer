@@ -1,0 +1,11 @@
+AURORA PLAYER 2.0
+
+Windows:
+1. Install Visual Studio 2022 Desktop development with C++, CMake and Git.
+2. Open a Developer Command Prompt.
+3. cd CppMusicPlayer
+4. build_windows.bat
+5. Run build\Release\CppMusicPlayer.exe
+6. Settings -> Add Music Folder
+
+The first build downloads native C++ dependencies. The application itself works offline after it is built.

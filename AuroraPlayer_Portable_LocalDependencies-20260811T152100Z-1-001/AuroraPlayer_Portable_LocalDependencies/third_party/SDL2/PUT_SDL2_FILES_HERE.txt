@@ -1,0 +1,1 @@
+Put the MinGW SDL2 development package here. See DEPENDENCIES.md.
