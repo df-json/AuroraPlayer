@@ -2,7 +2,8 @@
 #include <cstdint>
 #include <string>
 
-struct Song {
+struct Song
+{
     std::int64_t id = 0;
     std::string title;
     std::string artist = "Unknown Artist";

@@ -5,6 +5,106 @@
 #include <SDL.h>
 #include <filesystem>
 #include <iostream>
-App::~App(){ImGui_ImplSDLRenderer2_Shutdown();ImGui_ImplSDL2_Shutdown();if(ImGui::GetCurrentContext())ImGui::DestroyContext();if(renderer_)SDL_DestroyRenderer(renderer_);if(window_)SDL_DestroyWindow(window_);SDL_Quit();}
-bool App::initialize(){if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO|SDL_INIT_EVENTS)!=0){std::cerr<<SDL_GetError()<<'\n';return false;}window_=SDL_CreateWindow("Aurora Player",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,1360,820,SDL_WINDOW_RESIZABLE|SDL_WINDOW_ALLOW_HIGHDPI);if(!window_){std::cerr<<SDL_GetError()<<'\n';return false;}renderer_=SDL_CreateRenderer(window_,-1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);if(!renderer_){std::cerr<<SDL_GetError()<<'\n';return false;}SDL_SetWindowData(window_,"renderer",renderer_);IMGUI_CHECKVERSION();ImGui::CreateContext();ImGuiIO&io=ImGui::GetIO();io.ConfigFlags|=ImGuiConfigFlags_NavEnableKeyboard;ImGui::StyleColorsDark();auto&st=ImGui::GetStyle();st.WindowRounding=12;st.ChildRounding=10;st.FrameRounding=7;st.PopupRounding=8;st.ItemSpacing=ImVec2(10,8);ImGui_ImplSDL2_InitForSDLRenderer(window_,renderer_);ImGui_ImplSDLRenderer2_Init(renderer_);std::filesystem::create_directories("data");db_=std::make_unique<Database>("data/music.db");if(!db_->open()||!db_->initialize())return false;settings_=std::make_unique<Settings>(*db_);player_=std::make_unique<AudioPlayer>();if(!player_->initialize())return false;player_->setVolume(settings_->defaultVolume());queue_=std::make_unique<Queue>();library_=std::make_unique<MusicLibrary>(*db_);db_->reconcileMissingFiles();ui_=std::make_unique<UI>(*db_,*library_,*player_,*queue_,*settings_);ui_->setWindow(window_);return true;}
-int App::run(){bool running=true;while(running&&!ui_->wantsQuit()){SDL_Event e;while(SDL_PollEvent(&e)){ImGui_ImplSDL2_ProcessEvent(&e);if(e.type==SDL_QUIT)running=false;if(e.type==SDL_KEYDOWN&&!e.key.repeat){if(e.key.keysym.sym==SDLK_SPACE){if(player_->isPlaying())player_->pause();else player_->play();}else if(e.key.keysym.sym==SDLK_LEFT)player_->seek(player_->position()-5);else if(e.key.keysym.sym==SDLK_RIGHT)player_->seek(player_->position()+5);else if(e.key.keysym.sym==SDLK_UP)player_->setVolume(player_->volume()+0.05f);else if(e.key.keysym.sym==SDLK_DOWN)player_->setVolume(player_->volume()-0.05f);}}ImGui_ImplSDLRenderer2_NewFrame();ImGui_ImplSDL2_NewFrame();ImGui::NewFrame();ui_->render();ImGui::Render();SDL_SetRenderDrawColor(renderer_,12,13,16,255);SDL_RenderClear(renderer_);ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData(),renderer_);SDL_RenderPresent(renderer_);}return 0;}
+App::~App()
+{
+    ImGui_ImplSDLRenderer2_Shutdown();
+    ImGui_ImplSDL2_Shutdown();
+    if (ImGui::GetCurrentContext())
+        ImGui::DestroyContext();
+    if (renderer_)
+        SDL_DestroyRenderer(renderer_);
+    if (window_)
+        SDL_DestroyWindow(window_);
+    SDL_Quit();
+}
+bool App::initialize()
+{
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_EVENTS) != 0)
+    {
+        std::cerr << SDL_GetError() << '\n';
+        return false;
+    }
+    window_ = SDL_CreateWindow("Aurora Player", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1360, 820, SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+    if (!window_)
+    {
+        std::cerr << SDL_GetError() << '\n';
+        return false;
+    }
+    renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    if (!renderer_)
+    {
+        std::cerr << SDL_GetError() << '\n';
+        return false;
+    }
+    SDL_SetWindowData(window_, "renderer", renderer_);
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO &io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    ImGui::StyleColorsDark();
+    auto &st = ImGui::GetStyle();
+    st.WindowRounding = 12;
+    st.ChildRounding = 10;
+    st.FrameRounding = 7;
+    st.PopupRounding = 8;
+    st.ItemSpacing = ImVec2(10, 8);
+    ImGui_ImplSDL2_InitForSDLRenderer(window_, renderer_);
+    ImGui_ImplSDLRenderer2_Init(renderer_);
+    std::filesystem::create_directories("data");
+    db_ = std::make_unique<Database>("data/music.db");
+    if (!db_->open() || !db_->initialize())
+        return false;
+    settings_ = std::make_unique<Settings>(*db_);
+    player_ = std::make_unique<AudioPlayer>();
+    if (!player_->initialize())
+        return false;
+    player_->setVolume(settings_->defaultVolume());
+    queue_ = std::make_unique<Queue>();
+    library_ = std::make_unique<MusicLibrary>(*db_);
+    db_->reconcileMissingFiles();
+    ui_ = std::make_unique<UI>(*db_, *library_, *player_, *queue_, *settings_);
+    ui_->setWindow(window_);
+    return true;
+}
+int App::run()
+{
+    bool running = true;
+    while (running && !ui_->wantsQuit())
+    {
+        SDL_Event e;
+        while (SDL_PollEvent(&e))
+        {
+            ImGui_ImplSDL2_ProcessEvent(&e);
+            if (e.type == SDL_QUIT)
+                running = false;
+            if (e.type == SDL_KEYDOWN && !e.key.repeat)
+            {
+                if (e.key.keysym.sym == SDLK_SPACE)
+                {
+                    if (player_->isPlaying())
+                        player_->pause();
+                    else
+                        player_->play();
+                }
+                else if (e.key.keysym.sym == SDLK_LEFT)
+                    player_->seek(player_->position() - 5);
+                else if (e.key.keysym.sym == SDLK_RIGHT)
+                    player_->seek(player_->position() + 5);
+                else if (e.key.keysym.sym == SDLK_UP)
+                    player_->setVolume(player_->volume() + 0.05f);
+                else if (e.key.keysym.sym == SDLK_DOWN)
+                    player_->setVolume(player_->volume() - 0.05f);
+            }
+        }
+        ImGui_ImplSDLRenderer2_NewFrame();
+        ImGui_ImplSDL2_NewFrame();
+        ImGui::NewFrame();
+        ui_->render();
+        ImGui::Render();
+        SDL_SetRenderDrawColor(renderer_, 12, 13, 16, 255);
+        SDL_RenderClear(renderer_);
+        ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData(), renderer_);
+        SDL_RenderPresent(renderer_);
+    }
+    return 0;
+}
