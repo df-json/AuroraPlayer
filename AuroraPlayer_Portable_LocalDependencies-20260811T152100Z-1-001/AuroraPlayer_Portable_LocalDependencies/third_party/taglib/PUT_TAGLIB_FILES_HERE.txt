@@ -1,0 +1,1 @@
+Put TagLib MinGW-compatible headers, import library, DLL, and any runtime dependencies here.
