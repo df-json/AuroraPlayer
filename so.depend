@@ -1,0 +1,293 @@
+# depslib dependency file v1.0
+1787057577 source:c:\users\nimis\desktop\so\main.cpp
+	<SFML/Audio.hpp>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio.hpp
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/PlaybackDevice.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/System.hpp>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<optional>
+	<vector>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundchannel.hpp
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\angle.hpp
+	<SFML/System/Angle.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\angle.inl
+	<SFML/System/Angle.hpp>
+	<cassert>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\vector3.hpp
+	<type_traits>
+	<cassert>
+	<cmath>
+	<SFML/System/Vector3.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\vector3.inl
+	<SFML/System/Vector3.hpp>
+	<cassert>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<filesystem>
+	<memory>
+	<optional>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<memory>
+	<optional>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AudioResource.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Vector3.hpp>
+	<functional>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\audioresource.hpp
+	<SFML/Audio/Export.hpp>
+	<memory>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\time.hpp
+	<chrono>
+	<cstdint>
+	<SFML/System/Time.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\time.inl
+	<SFML/System/Time.hpp>
+	<ratio>
+	<cassert>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<filesystem>
+	<memory>
+	<vector>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<filesystem>
+	<vector>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\playbackdevice.hpp
+	<SFML/Audio/Export.hpp>
+	<functional>
+	<optional>
+	<string>
+	<vector>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<memory>
+	<cstdlib>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<SFML/System/Time.hpp>
+	<filesystem>
+	<unordered_set>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundChannel.hpp>
+	<memory>
+	<string>
+	<vector>
+	<cstddef>
+	<cstdint>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<filesystem>
+	<memory>
+	<unordered_map>
+	<cstddef>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\audio\soundfilefactory.inl
+	<SFML/Audio/SoundFileFactory.hpp>
+	<memory>
+
+1787057160 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Angle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Err.hpp>
+	<SFML/System/Exception.hpp>
+	<SFML/System/FileInputStream.hpp>
+	<SFML/System/InputStream.hpp>
+	<SFML/System/MemoryInputStream.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/String.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/TimeoutWithPredicate.hpp>
+	<SFML/System/Utf.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+	<SFML/System/Version.hpp>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+	<ratio>
+	<type_traits>
+	<SFML/System/SuspendAwareClock.hpp>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\suspendawareclock.hpp
+	<SFML/System/Export.hpp>
+	<chrono>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\err.hpp
+	<SFML/System/Export.hpp>
+	<iosfwd>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\exception.hpp
+	<SFML/System/Export.hpp>
+	<stdexcept>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\fileinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<filesystem>
+	<memory>
+	<cstdint>
+	<cstdio>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\inputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<optional>
+	<cstdint>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\memoryinputstream.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Export.hpp>
+	<SFML/System/InputStream.hpp>
+	<cstddef>
+	<cstdint>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\sleep.hpp
+	<SFML/System/Export.hpp>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Utf.hpp>
+	<locale>
+	<optional>
+	<string>
+	<string_view>
+	<cstddef>
+	<cstdint>
+	<SFML/System/String.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\utf.hpp
+	<SFML/Config.hpp>
+	<array>
+	<locale>
+	<optional>
+	<cstdint>
+	<cstdlib>
+	<SFML/System/Utf.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\utf.inl
+	<SFML/System/Err.hpp>
+	<SFML/System/Utf.hpp>
+	<iterator>
+	<ostream>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\string.inl
+	<SFML/System/String.hpp>
+	<iterator>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\timeoutwithpredicate.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+	<functional>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\vector2.hpp
+	<SFML/System/Angle.hpp>
+	<type_traits>
+	<cassert>
+	<cmath>
+	<SFML/System/Vector2.inl>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\vector2.inl
+	<SFML/System/Vector2.hpp>
+	<cassert>
+
+1787057161 c:\users\nimis\downloads\sfml-3.1.0-windows-gcc-14.2.0-mingw-32-bit\sfml-3.1.0\include\sfml\system\version.hpp
+	<SFML/System/Export.hpp>
+	<string_view>
+	<cstdint>
+
