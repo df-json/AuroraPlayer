@@ -1,0 +1,15 @@
+Optional: drop a single .ttf or .otf font file directly in this folder
+(assets/fonts/) and Aurora Player will use it for the UI instead of the
+Windows system font.
+
+Apple's San Francisco font can't be bundled here since it's licensed only
+for use on Apple platforms. For a very close free alternative, "Inter"
+(https://rsms.me/inter/, SIL Open Font License) was designed to be
+metrically compatible with San Francisco and is a great substitute:
+
+  1. Download Inter (Inter-Regular.ttf is enough).
+  2. Place it in this folder.
+  3. Rebuild / relaunch Aurora Player.
+
+If this folder is empty, Aurora Player falls back to Windows' own
+"Segoe UI" font, which is already installed on every Windows PC.
